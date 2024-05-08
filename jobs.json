@@ -1,0 +1,19 @@
+[
+	{
+		"name": "Echo Test",
+		"command": "echo Hello, World!"
+	},
+	{
+		"name": "List Directory",
+		"command": "ls"
+	},
+	{
+		"name": "Make Directory",
+		"command": "mkdir TestDirectory"
+	},
+	{
+		"name": "List Directory",
+		"command": "ls"
+	}
+]
+
