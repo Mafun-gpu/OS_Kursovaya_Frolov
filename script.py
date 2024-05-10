@@ -20,6 +20,10 @@ def load_jobs(filename):
 
 def run_job(job):
     """Запустить задание и вернуть результат."""
+    # Проверка на рекурсивный ввод
+    if 'script.py' in job['command']:
+        logging.error(f"Онаружена попыткарекурсивного вызова в задании {job['name']")
+        return "Ошибка: рекурсивный вызов не допускается."
     try:
         # Запуск команды, указанной в задании
         result = subprocess.run(job['command'], shell=True, check=True, capture_output=True, text=True)
